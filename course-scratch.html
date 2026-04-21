@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scratch 遊戲程式 | 創意方塊</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .course-page { 
+            background: var(--bg-light);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .course-detail { 
+            padding: 80px 20px; 
+            max-width: 900px; 
+            margin: 0 auto; 
+            flex-grow: 1;
+        }
+        .course-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .course-header h1 { 
+            font-size: 3.5rem; 
+            color: var(--primary-color); 
+            margin-bottom: 20px; 
+        }
+        .course-badge {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary-color);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .hero-img { 
+            width: 100%; 
+            height: 400px;
+            object-fit: cover;
+            border-radius: var(--border-radius-main); 
+            margin-bottom: 50px; 
+            box-shadow: var(--shadow-lg); 
+        }
+        .content-grid { display: flex; flex-direction: column; gap: 40px; }
+        .course-article {
+            background: var(--bg-white);
+            padding: 40px;
+            border-radius: var(--border-radius-main);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(0,0,0,0.03);
+            font-size: 1.15rem; 
+            line-height: 1.9; 
+            color: var(--text-primary);
+        }
+        .sidebar-info {
+            background: var(--bg-white);
+            padding: 40px;
+            border-radius: var(--border-radius-main);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(0,0,0,0.03);
+            text-align: center;
+        }
+        .info-list {
+            list-style: none;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .info-list li {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+        .info-list i { color: var(--primary-color); display: flex; justify-content: center; align-items: center; width: 45px; height: 45px; flex-shrink: 0; font-size: 1.2rem; background: var(--primary-light); border-radius: 50%; }
+        .price-box {
+            background: rgba(0,0,0,0.02);
+            padding: 20px;
+            border-radius: var(--border-radius-sm);
+            text-align: center;
+            margin-bottom: 30px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .price-box .early { color: var(--lego-red); font-size: 1.4rem; font-weight: 700; display: block; margin-bottom: 5px; }
+        .price-box .orig { text-decoration: line-through; color: var(--text-secondary); }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 700;
+            margin-bottom: 40px;
+            transition: color 0.3s ease;
+        }
+        .back-btn:hover { color: var(--primary-color); }
+        
+        @media (max-width: 768px) {
+            .content-grid { grid-template-columns: 1fr; }
+            .course-header h1 { font-size: 2.5rem; }
+            .hero-img { height: 250px; }
+            .course-article { padding: 25px; }
+        }
+    </style>
+</head>
+<body class="course-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">創意方塊</h1>
+            <ul class="nav-links">
+                <li><a href="index.html#home">首頁</a></li>
+                <li><a href="index.html#courses">課程介紹</a></li>
+                <li><a href="index.html#register">報名資訊</a></li>
+                <li><a href="index.html#contact">聯絡我們</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="course-detail">
+        <a href="index.html#courses" class="back-btn"><i class="fa-solid fa-arrow-left"></i> 返回課程列表</a>
+        
+        <div class="course-header">
+            <div class="course-badge">輕鬆上手無負擔</div>
+            <h1>Scratch 遊戲程式</h1>
+            <p>親手製作多款人氣小遊戲，在動手做中學習邏輯與創意！</p>
+        </div>
+
+        <img src="images/scratch.png" alt="Scratch 遊戲程式" class="hero-img">
+
+        <div class="content-grid">
+            <div class="course-article">
+                <h3>課程簡介</h3>
+                <br>
+                <p>想做出屬於自己的遊戲嗎？5天全日營，帶孩子從零開始學習 Scratch 程式設計，親手製作多款人氣小遊戲：太空射擊、小雞過馬路、Dino Jump、Flappy Bird、跑酷遊戲……每一天都有新挑戰！在動手做中學習邏輯、創意與解決問題能力，讓孩子發現「原來我也能自己做遊戲！」快來加入，開啟專屬自己的遊戲世界！</p>
+                <div class="course-logistics" style="border-left-color: var(--primary-color);">
+                    <h4><i class="fa-solid fa-user-check" style="color: var(--primary-color);"></i> 適合對象</h4>
+                    <p>升小一到升小三<br>5人以下小班教學<br>沒有經驗也很適合，歡迎一起體驗寫程式的樂趣！</p>
+                    
+                    <h4><i class="fa-solid fa-calendar-day" style="color: var(--primary-color);"></i> 營隊時間</h4>
+                    <p>第7週：8/10(一) - 8/14(五)<br>上課時間：上午9:00 - 下午4:00</p>
+                    
+                    <h4><i class="fa-solid fa-clock" style="color: var(--primary-color);"></i> 接送時間</h4>
+                    <p>最早到教室時間：上午8:30<br>接回時間：下午4:00-5:30</p>
+                    <p class="warning-text"><i class="fa-solid fa-circle-exclamation"></i> 若接回時間晚於下午5:30，每半小時收100元晚托費用，未滿半小時以半小時計</p>
+                </div>
+                <!-- 課程精選活動影片 -->
+                <div class="video-container" style="margin-top: 40px; text-align: center; background: #000; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-md);">
+                    <video autoplay loop muted controls playsinline preload="metadata" style="width: 100%; max-height: 600px; display: block; object-fit: contain;">
+                        <source src="images/scratch/Scratch營4×5_Full HD 1080p_HIGH_FR30.mp4" type="video/mp4">
+                        您的瀏覽器不支援此影片格式。
+                    </video>
+                </div>
+
+                
+                <h3 style="margin-top: 50px;">每日日程表</h3>
+                <div class="schedule-container" style="border-top: 3px solid var(--primary-color);">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th class="time-col">時間</th>
+                                <th>星期一</th>
+                                <th>星期二</th>
+                                <th>星期三</th>
+                                <th>星期四</th>
+                                <th>星期五</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="time-col">上午</td>
+                                <td><strong>吃硬幣遊戲</strong><br><span style="font-size: 0.9em;">認識角色移動<br>角色偵測</span></td>
+                                <td><strong>電流急急棒</strong><br><span style="font-size: 0.9em;">認識關卡變換</span></td>
+                                <td><strong>小恐龍 Dino Jump</strong><br><span style="font-size: 0.9em;">重力與碰撞<br>角色站在地上</span></td>
+                                <td><strong>坦克大戰</strong><br><span style="font-size: 0.9em;">學習運用分身<br>製作雙人遊戲</span></td>
+                                <td><strong>跑酷遊戲機制建立</strong><br><span style="font-size: 0.9em;">Hitbox 概念<br>角色物理模擬</span></td>
+                            </tr>
+                            <tr class="break-row">
+                                <td class="time-col">中午</td>
+                                <td colspan="5">午 休 時 間</td>
+                            </tr>
+                            <tr>
+                                <td class="time-col">下午</td>
+                                <td><strong>點擊遊戲</strong><br><span style="font-size: 0.9em;">認識事件<br>學習變數</span></td>
+                                <td><strong>飛行小鳥</strong><br><span style="font-size: 0.9em;">捲動式背景<br>模擬重力</span></td>
+                                <td><strong>太空保衛戰</strong><br><span style="font-size: 0.9em;">學習自定函式<br>變數作用域<br>UI設計</span></td>
+                                <td><strong>射箭遊戲</strong><br><span style="font-size: 0.9em;">學習造型變換<br>多關卡流程設計</span></td>
+                                <td><strong>跑酷關卡設計</strong><br><span style="font-size: 0.9em;">學習設計關卡<br>設計各種陷阱</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <aside class="sidebar-info">
+                <ul class="info-list">
+                    <li><i class="fa-regular fa-calendar-days"></i> <div><strong>日期</strong><br>8/17 - 8/21</div></li>
+                    <li><i class="fa-regular fa-clock"></i> <div><strong>時間</strong><br>9:00 - 16:00</div></li>
+                    <li><i class="fa-solid fa-users"></i> <div><strong>對象</strong><br>升小四到升小六</div></li>
+                </ul>
+
+                <div class="price-box">
+                    <span class="early">早鳥價: $5500 (至5/31)</span>
+                    <span class="orig">原價: $6500</span>
+                </div>
+
+                <a href="https://forms.gle/Cyem3i9cvwZY5Ler5" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display: inline-block; width: 100%; max-width: 400px; ">
+                    立即報名課程
+                </a>
+                <div style="margin-top: 15px;">
+                    <a href="https://lin.ee/r2JlDBU" target="_blank" rel="noopener noreferrer" class="btn" style="display: flex; align-items: center; justify-content: center; width: 100%; max-width: 400px; margin: 0 auto; background: #06C755; color: white; border: none; box-shadow: 0 10px 20px -5px rgba(6, 199, 85, 0.4);"><i class="fa-brands fa-line" style="font-size: 1.4rem; margin-right: 10px;"></i>LINE 專人諮詢</a>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 創意方塊機器人教室. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
