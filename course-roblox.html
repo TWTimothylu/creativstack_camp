@@ -165,41 +165,74 @@
 
                 
                 <h3 style="margin-top: 50px;">每日日程表</h3>
-                <div class="schedule-container" style="border-top: 3px solid var(--primary-color);">
-                    <table class="schedule-table">
-                        <thead>
-                            <tr>
-                                <th class="time-col">時間</th>
-                                <th>星期一</th>
-                                <th>星期二</th>
-                                <th>星期三</th>
-                                <th>星期四</th>
-                                <th>星期五</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="time-col">上午</td>
-                                <td><strong>基礎搭建</strong><br><span style="font-size: 0.9em;">熟悉介面與操作<br>搭建各式跳台<br>理解錨定防崩塌</span></td>
-                                <td><strong>超能力道具</strong><br><span style="font-size: 0.9em;">製作彈力跳台<br>製作加速跑道<br>腳本修改屬性</span></td>
-                                <td><strong>通關之鑰</strong><br><span style="font-size: 0.9em;">變數與條件判斷<br>需要鑰匙的門<br>製作背包道具</span></td>
-                                <td><strong>跑酷主題創作</strong><br><span style="font-size: 0.9em;">設定專屬主題<br>工具箱美化場景<br>設計關卡藍圖</span></td>
-                                <td><strong>打磨與發布</strong><br><span style="font-size: 0.9em;">加入音樂音效<br>設計圖示封面<br>體驗發布流程</span></td>
-                            </tr>
-                            <tr class="break-row">
-                                <td class="time-col">中午</td>
-                                <td colspan="5">午 休 時 間</td>
-                            </tr>
-                            <tr>
-                                <td class="time-col">下午</td>
-                                <td><strong>致命陷阱！</strong><br><span style="font-size: 0.9em;">學習Lua腳本<br>製作岩漿陷阱<br>製作消失的磚塊</span></td>
-                                <td><strong>流程控制</strong><br><span style="font-size: 0.9em;">建立檢查點<br>製作華麗終點線</span></td>
-                                <td><strong>計分與貨幣</strong><br><span style="font-size: 0.9em;">鋪設收集金幣<br>建立分數排行榜</span></td>
-                                <td><strong>個人專案衝刺</strong><br><span style="font-size: 0.9em;">大量與搭建關卡<br>整合所學腳本<br>老師指導除錯</span></td>
-                                <td><strong>大賽與發表</strong><br><span style="font-size: 0.9em;">全班遊戲試玩會<br>最速通關挑戰賽</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="modern-tabs">
+                    <div class="tab-nav">
+                        <button class="tab-btn active" onclick="switchTab(event, 'day1', 'course-roblox.html')">星期一</button>
+                        <button class="tab-btn" onclick="switchTab(event, 'day2', 'course-roblox.html')">星期二</button>
+                        <button class="tab-btn" onclick="switchTab(event, 'day3', 'course-roblox.html')">星期三</button>
+                        <button class="tab-btn" onclick="switchTab(event, 'day4', 'course-roblox.html')">星期四</button>
+                        <button class="tab-btn" onclick="switchTab(event, 'day5', 'course-roblox.html')">星期五</button>
+                    </div>
+                    <div id="day1_course-roblox" class="tab-content active">
+                        <div class="time-block">
+                            <span class="badge" style="background:var(--lego-red);">上午 09:00 - 12:00</span>
+                            <h4>基礎搭建</h4>
+                            <p>熟悉介面與操作、搭建各式跳台、理解錨定防崩塌</p>
+                        </div>
+                        <div class="time-block">
+                            <span class="badge afternoon">下午 13:00 - 16:00</span>
+                            <h4>致命陷阱！</h4>
+                            <p>學習Lua腳本、製作岩漿陷阱、製作消失的磚塊</p>
+                        </div>
+                    </div>
+                    <div id="day2_course-roblox" class="tab-content ">
+                        <div class="time-block">
+                            <span class="badge" style="background:var(--lego-red);">上午 09:00 - 12:00</span>
+                            <h4>超能力道具</h4>
+                            <p>製作彈力跳台、製作加速跑道、腳本修改屬性</p>
+                        </div>
+                        <div class="time-block">
+                            <span class="badge afternoon">下午 13:00 - 16:00</span>
+                            <h4>流程控制</h4>
+                            <p>建立檢查點、製作華麗終點線</p>
+                        </div>
+                    </div>
+                    <div id="day3_course-roblox" class="tab-content ">
+                        <div class="time-block">
+                            <span class="badge" style="background:var(--lego-red);">上午 09:00 - 12:00</span>
+                            <h4>通關之鑰</h4>
+                            <p>變數與條件判斷、需要鑰匙的門、製作背包道具</p>
+                        </div>
+                        <div class="time-block">
+                            <span class="badge afternoon">下午 13:00 - 16:00</span>
+                            <h4>計分與貨幣</h4>
+                            <p>鋪設收集金幣、建立分數排行榜</p>
+                        </div>
+                    </div>
+                    <div id="day4_course-roblox" class="tab-content ">
+                        <div class="time-block">
+                            <span class="badge" style="background:var(--lego-red);">上午 09:00 - 12:00</span>
+                            <h4>跑酷主題創作</h4>
+                            <p>設定專屬主題、工具箱美化場景、設計關卡藍圖</p>
+                        </div>
+                        <div class="time-block">
+                            <span class="badge afternoon">下午 13:00 - 16:00</span>
+                            <h4>個人專案衝刺</h4>
+                            <p>大量與搭建關卡、整合所學腳本、老師指導除錯</p>
+                        </div>
+                    </div>
+                    <div id="day5_course-roblox" class="tab-content ">
+                        <div class="time-block">
+                            <span class="badge" style="background:var(--lego-red);">上午 09:00 - 12:00</span>
+                            <h4>打磨與發布</h4>
+                            <p>加入音樂音效、設計圖示封面、體驗發布流程</p>
+                        </div>
+                        <div class="time-block">
+                            <span class="badge afternoon">下午 13:00 - 16:00</span>
+                            <h4>大賽與發表</h4>
+                            <p>全班遊戲試玩會、最速通關挑戰賽</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -229,5 +262,33 @@
         <p>&copy; 2026 創意方塊機器人教室. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
+
+    <script>
+        function switchTab(evt, dayName, fileRef) {
+            let contextId = fileRef.replace('.html', '');
+            let tabcontent = document.querySelectorAll('.tab-content[id$="_' + contextId + '"]');
+            for (let i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+
+            let tabbuttons = evt.currentTarget.parentElement.getElementsByClassName("tab-btn");
+            for (let i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].className = tabbuttons[i].className.replace(" active", "");
+            }
+
+            let targetId = dayName + "_" + contextId;
+            document.getElementById(targetId).style.display = "block";
+            // Use small timeout to allow display:block to apply before animating opacity
+            setTimeout(() => document.getElementById(targetId).classList.add("active"), 10);
+            evt.currentTarget.className += " active";
+        }
+        
+        // initialize
+        document.addEventListener("DOMContentLoaded", () => {
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(t => { if(!t.classList.contains('active')) t.style.display = 'none'; });
+        });
+    </script>
 </body>
 </html>

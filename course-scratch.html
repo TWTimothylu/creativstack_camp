@@ -165,41 +165,74 @@
 
                 
                 <h3 style="margin-top: 50px;">每日日程表</h3>
-                <div class="schedule-container" style="border-top: 3px solid var(--primary-color);">
-                    <table class="schedule-table">
-                        <thead>
-                            <tr>
-                                <th class="time-col">時間</th>
-                                <th>星期一</th>
-                                <th>星期二</th>
-                                <th>星期三</th>
-                                <th>星期四</th>
-                                <th>星期五</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="time-col">上午</td>
-                                <td><strong>吃硬幣遊戲</strong><br><span style="font-size: 0.9em;">認識角色移動<br>角色偵測</span></td>
-                                <td><strong>電流急急棒</strong><br><span style="font-size: 0.9em;">認識關卡變換</span></td>
-                                <td><strong>小恐龍 Dino Jump</strong><br><span style="font-size: 0.9em;">重力與碰撞<br>角色站在地上</span></td>
-                                <td><strong>坦克大戰</strong><br><span style="font-size: 0.9em;">學習運用分身<br>製作雙人遊戲</span></td>
-                                <td><strong>跑酷遊戲機制建立</strong><br><span style="font-size: 0.9em;">Hitbox 概念<br>角色物理模擬</span></td>
-                            </tr>
-                            <tr class="break-row">
-                                <td class="time-col">中午</td>
-                                <td colspan="5">午 休 時 間</td>
-                            </tr>
-                            <tr>
-                                <td class="time-col">下午</td>
-                                <td><strong>點擊遊戲</strong><br><span style="font-size: 0.9em;">認識事件<br>學習變數</span></td>
-                                <td><strong>飛行小鳥</strong><br><span style="font-size: 0.9em;">捲動式背景<br>模擬重力</span></td>
-                                <td><strong>太空保衛戰</strong><br><span style="font-size: 0.9em;">學習自定函式<br>變數作用域<br>UI設計</span></td>
-                                <td><strong>射箭遊戲</strong><br><span style="font-size: 0.9em;">學習造型變換<br>多關卡流程設計</span></td>
-                                <td><strong>跑酷關卡設計</strong><br><span style="font-size: 0.9em;">學習設計關卡<br>設計各種陷阱</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="modern-tabs">
+                    <div class="tab-nav">
+                        <button class="tab-btn active" onclick="switchTab(event, 'day1', 'course-scratch.html')">星期一</button>
+                        <button class="tab-btn" onclick="switchTab(event, 'day2', 'course-scratch.html')">星期二</button>
+                        <button class="tab-btn" onclick="switchTab(event, 'day3', 'course-scratch.html')">星期三</button>
+                        <button class="tab-btn" onclick="switchTab(event, 'day4', 'course-scratch.html')">星期四</button>
+                        <button class="tab-btn" onclick="switchTab(event, 'day5', 'course-scratch.html')">星期五</button>
+                    </div>
+                    <div id="day1_course-scratch" class="tab-content active">
+                        <div class="time-block">
+                            <span class="badge" style="background:var(--lego-green);">上午 09:00 - 12:00</span>
+                            <h4>吃硬幣遊戲</h4>
+                            <p>認識角色移動、角色偵測</p>
+                        </div>
+                        <div class="time-block">
+                            <span class="badge afternoon">下午 13:00 - 16:00</span>
+                            <h4>點擊遊戲</h4>
+                            <p>認識事件、學習變數</p>
+                        </div>
+                    </div>
+                    <div id="day2_course-scratch" class="tab-content ">
+                        <div class="time-block">
+                            <span class="badge" style="background:var(--lego-green);">上午 09:00 - 12:00</span>
+                            <h4>電流急急棒</h4>
+                            <p>認識關卡變換</p>
+                        </div>
+                        <div class="time-block">
+                            <span class="badge afternoon">下午 13:00 - 16:00</span>
+                            <h4>飛行小鳥</h4>
+                            <p>捲動式背景、模擬重力</p>
+                        </div>
+                    </div>
+                    <div id="day3_course-scratch" class="tab-content ">
+                        <div class="time-block">
+                            <span class="badge" style="background:var(--lego-green);">上午 09:00 - 12:00</span>
+                            <h4>小恐龍 Dino Jump</h4>
+                            <p>重力與碰撞、角色站在地上</p>
+                        </div>
+                        <div class="time-block">
+                            <span class="badge afternoon">下午 13:00 - 16:00</span>
+                            <h4>太空保衛戰</h4>
+                            <p>學習自定函式、變數作用域、UI設計</p>
+                        </div>
+                    </div>
+                    <div id="day4_course-scratch" class="tab-content ">
+                        <div class="time-block">
+                            <span class="badge" style="background:var(--lego-green);">上午 09:00 - 12:00</span>
+                            <h4>坦克大戰</h4>
+                            <p>學習運用分身、製作雙人遊戲</p>
+                        </div>
+                        <div class="time-block">
+                            <span class="badge afternoon">下午 13:00 - 16:00</span>
+                            <h4>射箭遊戲</h4>
+                            <p>學習造型變換、多關卡流程設計</p>
+                        </div>
+                    </div>
+                    <div id="day5_course-scratch" class="tab-content ">
+                        <div class="time-block">
+                            <span class="badge" style="background:var(--lego-green);">上午 09:00 - 12:00</span>
+                            <h4>跑酷遊戲機制建立</h4>
+                            <p>Hitbox 概念、角色物理模擬</p>
+                        </div>
+                        <div class="time-block">
+                            <span class="badge afternoon">下午 13:00 - 16:00</span>
+                            <h4>跑酷關卡設計</h4>
+                            <p>學習設計關卡、設計各種陷阱</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -229,5 +262,33 @@
         <p>&copy; 2026 創意方塊機器人教室. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
+
+    <script>
+        function switchTab(evt, dayName, fileRef) {
+            let contextId = fileRef.replace('.html', '');
+            let tabcontent = document.querySelectorAll('.tab-content[id$="_' + contextId + '"]');
+            for (let i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+
+            let tabbuttons = evt.currentTarget.parentElement.getElementsByClassName("tab-btn");
+            for (let i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].className = tabbuttons[i].className.replace(" active", "");
+            }
+
+            let targetId = dayName + "_" + contextId;
+            document.getElementById(targetId).style.display = "block";
+            // Use small timeout to allow display:block to apply before animating opacity
+            setTimeout(() => document.getElementById(targetId).classList.add("active"), 10);
+            evt.currentTarget.className += " active";
+        }
+        
+        // initialize
+        document.addEventListener("DOMContentLoaded", () => {
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(t => { if(!t.classList.contains('active')) t.style.display = 'none'; });
+        });
+    </script>
 </body>
 </html>

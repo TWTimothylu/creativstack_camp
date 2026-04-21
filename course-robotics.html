@@ -165,41 +165,74 @@
 
                 
                 <h3 style="margin-top: 50px;">每日日程表</h3>
-                <div class="schedule-container" style="border-top: 3px solid var(--primary-color);">
-                    <table class="schedule-table">
-                        <thead>
-                            <tr>
-                                <th class="time-col">時間</th>
-                                <th>星期一</th>
-                                <th>星期二</th>
-                                <th>星期三</th>
-                                <th>星期四</th>
-                                <th>星期五</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="time-col">上午</td>
-                                <td><strong>骨牌機器人</strong><br><span style="font-size: 0.9em;">基本馬達控制</span></td>
-                                <td><strong>顏色分類機</strong><br><span style="font-size: 0.9em;">顏色感應器運用<br>齒輪比計算</span></td>
-                                <td><strong>投石機</strong><br><span style="font-size: 0.9em;">認識重力位能<br>認識槓桿原理</span></td>
-                                <td><strong>自走車循跡</strong><br><span style="font-size: 0.9em;">認識循跡原理</span></td>
-                                <td><strong>設計相撲車</strong><br><span style="font-size: 0.9em;">設計自己的相撲車</span></td>
-                            </tr>
-                            <tr class="break-row">
-                                <td class="time-col">中午</td>
-                                <td colspan="5">午 休 時 間</td>
-                            </tr>
-                            <tr>
-                                <td class="time-col">下午</td>
-                                <td><strong>遙控車</strong><br><span style="font-size: 0.9em;">認識差速器<br>學習遙控程式</span></td>
-                                <td><strong>機械手臂</strong><br><span style="font-size: 0.9em;">多馬達控制<br>函式編寫</span></td>
-                                <td><strong>自動靶</strong><br><span style="font-size: 0.9em;">計數器程式<br>設計橡皮筋槍</span></td>
-                                <td><strong>自走車循跡</strong><br><span style="font-size: 0.9em;">讓循跡車完成任務</span></td>
-                                <td><strong>相撲車對戰</strong><br><span style="font-size: 0.9em;">用設計的相撲車對戰<br>調整與改裝</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="modern-tabs">
+                    <div class="tab-nav">
+                        <button class="tab-btn active" onclick="switchTab(event, 'day1', 'course-robotics.html')">星期一</button>
+                        <button class="tab-btn" onclick="switchTab(event, 'day2', 'course-robotics.html')">星期二</button>
+                        <button class="tab-btn" onclick="switchTab(event, 'day3', 'course-robotics.html')">星期三</button>
+                        <button class="tab-btn" onclick="switchTab(event, 'day4', 'course-robotics.html')">星期四</button>
+                        <button class="tab-btn" onclick="switchTab(event, 'day5', 'course-robotics.html')">星期五</button>
+                    </div>
+                    <div id="day1_course-robotics" class="tab-content active">
+                        <div class="time-block">
+                            <span class="badge" style="background:var(--lego-blue);">上午 09:00 - 12:00</span>
+                            <h4>骨牌機器人</h4>
+                            <p>基本馬達控制</p>
+                        </div>
+                        <div class="time-block">
+                            <span class="badge afternoon">下午 13:00 - 16:00</span>
+                            <h4>遙控車</h4>
+                            <p>認識差速器、學習遙控程式</p>
+                        </div>
+                    </div>
+                    <div id="day2_course-robotics" class="tab-content ">
+                        <div class="time-block">
+                            <span class="badge" style="background:var(--lego-blue);">上午 09:00 - 12:00</span>
+                            <h4>顏色分類機</h4>
+                            <p>顏色感應器運用、齒輪比計算</p>
+                        </div>
+                        <div class="time-block">
+                            <span class="badge afternoon">下午 13:00 - 16:00</span>
+                            <h4>機械手臂</h4>
+                            <p>多馬達控制、函式編寫</p>
+                        </div>
+                    </div>
+                    <div id="day3_course-robotics" class="tab-content ">
+                        <div class="time-block">
+                            <span class="badge" style="background:var(--lego-blue);">上午 09:00 - 12:00</span>
+                            <h4>投石機</h4>
+                            <p>認識重力位能、認識槓桿原理</p>
+                        </div>
+                        <div class="time-block">
+                            <span class="badge afternoon">下午 13:00 - 16:00</span>
+                            <h4>自動靶</h4>
+                            <p>計數器程式、設計橡皮筋槍</p>
+                        </div>
+                    </div>
+                    <div id="day4_course-robotics" class="tab-content ">
+                        <div class="time-block">
+                            <span class="badge" style="background:var(--lego-blue);">上午 09:00 - 12:00</span>
+                            <h4>自走車循跡</h4>
+                            <p>認識循跡原理</p>
+                        </div>
+                        <div class="time-block">
+                            <span class="badge afternoon">下午 13:00 - 16:00</span>
+                            <h4>自走車循跡</h4>
+                            <p>讓循跡車完成任務</p>
+                        </div>
+                    </div>
+                    <div id="day5_course-robotics" class="tab-content ">
+                        <div class="time-block">
+                            <span class="badge" style="background:var(--lego-blue);">上午 09:00 - 12:00</span>
+                            <h4>設計相撲車</h4>
+                            <p>設計自己的相撲車</p>
+                        </div>
+                        <div class="time-block">
+                            <span class="badge afternoon">下午 13:00 - 16:00</span>
+                            <h4>相撲車對戰</h4>
+                            <p>用設計的相撲車對戰、調整與改裝</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -229,5 +262,33 @@
         <p>&copy; 2026 創意方塊機器人教室. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
+
+    <script>
+        function switchTab(evt, dayName, fileRef) {
+            let contextId = fileRef.replace('.html', '');
+            let tabcontent = document.querySelectorAll('.tab-content[id$="_' + contextId + '"]');
+            for (let i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+
+            let tabbuttons = evt.currentTarget.parentElement.getElementsByClassName("tab-btn");
+            for (let i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].className = tabbuttons[i].className.replace(" active", "");
+            }
+
+            let targetId = dayName + "_" + contextId;
+            document.getElementById(targetId).style.display = "block";
+            // Use small timeout to allow display:block to apply before animating opacity
+            setTimeout(() => document.getElementById(targetId).classList.add("active"), 10);
+            evt.currentTarget.className += " active";
+        }
+        
+        // initialize
+        document.addEventListener("DOMContentLoaded", () => {
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(t => { if(!t.classList.contains('active')) t.style.display = 'none'; });
+        });
+    </script>
 </body>
 </html>
