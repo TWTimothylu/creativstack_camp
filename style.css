@@ -702,22 +702,47 @@ h1, h2, h3, h4, .logo, .early-bird {
 
 
 /* Mobile Responsive Course Schedule Improvements */
-.mobile-scroll-hint {
+.tab-scroll-hint {
     display: none;
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    text-align: right;
-    margin-bottom: 5px;
-    font-weight: 500;
-}
-.mobile-scroll-hint i {
-    margin-right: 5px;
-    animation: swipeLeftRight 2s infinite ease-in-out;
 }
 
-@keyframes swipeLeftRight {
+@media (max-width: 600px) {
+    .tab-scroll-hint {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+        background: rgba(255, 153, 0, 0.1);
+        padding: 8px 16px;
+        border-radius: 50px;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: 500;
+    }
+    .tab-scroll-hint i {
+        color: var(--primary-color);
+        font-size: 1.1rem;
+    }
+    .tab-scroll-hint i.fa-angles-left {
+        margin-right: 8px;
+        animation: swipeLeft 1.5s infinite ease-in-out;
+    }
+    .tab-scroll-hint i.fa-angles-right {
+        margin-left: 8px;
+        animation: swipeRight 1.5s infinite ease-in-out;
+    }
+}
+
+@keyframes swipeLeft {
     0%, 100% { transform: translateX(0); }
-    50% { transform: translateX(8px); }
+    50% { transform: translateX(-5px); }
+}
+@keyframes swipeRight {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
 }
 
 @media (max-width: 850px) {
@@ -911,5 +936,3 @@ body.course-page,
     margin: 0;
 }
 
-/* Remove old mobile-scroll-hint since we use tabs */
-.mobile-scroll-hint { display: none !important; }
